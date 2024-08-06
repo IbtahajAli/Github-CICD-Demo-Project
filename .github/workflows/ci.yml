@@ -4,9 +4,9 @@ on: [push]
 
 env:
   DOCKER_IMAGE: my-nginx-html-server
-  #DOCKER_REGISTRY: https://index.docker.io/v1/
-  #DOCKER_REGISTRY_USERNAME: ibtahaj99
-  #DOCKER_REGISTRY_PASSWORD: BTEMheR@vP4a3N#
+  DOCKER_REGISTRY: https://index.docker.io/v1/
+  DOCKER_REGISTRY_USERNAME: ibtahaj99
+  DOCKER_REGISTRY_PASSWORD: BTEMheR@vP4a3N#
 
 jobs:
   build:
