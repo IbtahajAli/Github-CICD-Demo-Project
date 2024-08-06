@@ -50,5 +50,5 @@ jobs:
       - name: Test if the server is up
         run: |
           sleep 60
-          curl -v http://localhost:8080 || true
-          test $(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080) -eq 200
+          curl -v http://103.151.111.190:8080 || true
+          test $(curl -s -o /dev/null -w "%{http_code}" http://103.151.111.190:8080) -eq 200
