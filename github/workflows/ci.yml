@@ -16,7 +16,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,7 +28,7 @@ jobs:
         run: docker build -t ${{ env.DOCKER_IMAGE }} .
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build
     steps:
       - name: Checkout code
@@ -46,7 +46,7 @@ jobs:
           docker logs my-nginx-html-server
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: deploy
     container:
       image: curlimages/curl:latest
